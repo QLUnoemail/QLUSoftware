@@ -23,8 +23,8 @@
 <script src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
 <script>
     jQuery(document).ready(function($) {
-        
-
+        //$('#login').attr("z-index",999);
+        //$("#id").hide()
         $('#partners').carouFredSel({
             next : "#partners-next",
             prev : "#partners-prev",
@@ -59,11 +59,29 @@
             });
         })
     });
+
 </script>
+<script>
+    function autosh () {
+         // body...  
+         alert()
+         //document.getElementById("login")
+    }
+</script>
+<style type="text/css" media="screen">
+    #login{
+        width: 391px;
+        height:399px;
+        left: 45%;
+        top: 100px;
+        float :left;
+        
+        position: absolute;
+    }
+</style>
 </head>
 
 <body>
-
 <div class="header cbp-af-header navbar-fixed-top">
     <div class="cbp-af-inner">
             
@@ -117,7 +135,7 @@
                                 </ul>
                             </li>
                             <li class="menu-level-0"><a href="#"><span>社区</span></a></li>
-                            <li class="menu-level-0"><a href="#"><span>登录/注册</span></a></li>
+                            <li class="menu-level-0"><button onclick="document.getElementById('login').style.display=''"><span>登录/注册</span></button></li>
                             <!--<li class="menu-search">
                                 <form id="searchForm" class="menu-search-form" method="post">
                                     <input type="text" name="search" value="" class="menu-search-field" placeholder="Search the website" />
@@ -399,6 +417,31 @@
         </div>
         <!--/ Footer Style 2 -->
 </footer>
+
+
+<div id="login" class="panel panel-info" >
+   <div class="panel-heading" style="background:#3bbec0">
+       <span class=""><h1><strong>登录</strong></h1></span>
+   </div>
+   <div class="panel-body">
+       <form action="index_submit" method="get" accept-charset="utf-8">
+            <p><input type="text" class="form-control" id="firstname" 
+            placeholder="请输入名字"></p><!-- 用户名-->
+            <p><input type="password" class="form-control" id="firstname" 
+            placeholder="请输入密码"></p><!-- 密码-->
+            <p><div class="checkbox">
+               <input type="checkbox" name="">记住密码 
+            </div></p><!-- 记住密码栏-->
+            <p align="center">
+                <input type="submit" class="btn btn-primary" name="" value="登录">
+
+            </p><!-- 登录按钮-->
+       </form>
+   </div>
+   <div class="panel-footer">
+       
+   </div>
+</div>
 
 <!-- main JS libs  -->
 <script src="js/libs/modernizr.min.js"></script>
